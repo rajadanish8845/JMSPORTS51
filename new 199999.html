@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JM Sports</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #000000;
+}
+
+header {
+  background: #000000;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #ffcc00;
+}
+
+header img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+section {
+  padding: 30px 20px;
+}
+
+section h2 {
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 5px;
+  color: #ffcc00;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.slider img {
+  flex: 0 0 auto;
+  width: 300px;
+  border-radius: 10px;
+  border: 5px solid #ffcc00;
+}
+
+ul.events-list {
+  list-style: square;
+  padding-left: 20px;
+}
+
+ul.events-list li {
+  color: #fff;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));  
+  gap: 15px;
+}
+
+.team .member {
+  background: #fff;
+  color: #000000;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border: 5px solid #ffcc00;
+}
+
+form input, form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background: #ffcc00;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #fff;
+  color: #ffcc00;
+}
+
+footer {
+  background: #000000;
+  color: #ffcc00;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 5px solid #ffcc00;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <img src="logo.jpg" alt="JM Sports Logo">
+  <h1>JM Sports</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home">
+  <h2>Welcome</h2>
+  <p>Welcome to JM Sports — supporting athletes, inspiring greatness.</p>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>JM Sports is dedicated to promoting athletics and helping young athletes achieve their dreams. We organize sports events and provide professional guidance.</p>
+  <img src="https://cdn.pixabay.com/photo/2016/08/04/04/04/usain-bolt-1549434_1280.jpg" alt="Usain Bolt">
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="slider">
+    <img src="https://cdn.pixabay.com/photo/2021/04/04/04/04/sports-5967432_1280.jpg" alt="Athletics">
+    <img src="https://cdn.pixabay.com/photo/2021/04/04/04/04/sports-5967434_1280.jpg" alt="Training">
+    <img src="https://cdn.pixabay.com/photo/2021/04/04/04/04/sports-5967435_1280.jpg" alt="Track">
+  </div>
+</section>
+
+<section id="events">
+  <h2>Events</h2>
+  <ul class="events-list">
+    <li>100m Race</li>
+    <li>200m Race</li>
+    <li>400m Race</li>
+    <li>800m Race</li>
+    <li>1500m Race</li>
+    <li>Relay Races</li>
+    <li>Long Jump</li>
+    <li>High Jump</li>
+  </ul>
+</section>
+
+<section id="team">
+  <h2>Team</h2>
+  <div class="team">
+    <div class="member">
+      <h3>Raja Danish</h3>
+      <p>Founder & Coach</p>
+    </div>
+    <div class="member">
+      <h3>Ali Raza</h3>
+      <p>Fitness Expert</p>
+    </div>
+    <div class="member">
+      <h3>Fatima Khan</h3>
+      <p>Nutritionist</p>
+    </div>
+    <div class="member">
+      <h3>Ahmed Noor</h3>
+      <p>Event Manager</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form id="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 JM Sports. All rights reserved.
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit',(e)=>{
+  e.preventDefault();
+  alert("Thank you! Your message has been sent.");
+});
+</script>
+
+</body>
+</html>
